@@ -1,0 +1,58 @@
+HTML:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body id="parent">
+    
+    <section>
+        <div id="d1"></div>
+        <div id="d2">YOLO</div>
+        <div id="d3"></div>
+    </section>
+    
+</body>
+</html>
+
+CSS:
+*
+{
+    margin:0px;
+}
+#parent
+{
+    min-height: 200vh;
+    
+}
+
+
+
+  
+#d1
+{
+    background: red;
+    height:150vh;
+    width: 150vw;
+    
+    
+}
+#d2
+{
+    position: sticky;
+    top:0px;
+    background: yellow;;
+}
+#d3
+{
+      background: blue;
+      height:150vh;
+      width:150vw;
+      
+     
+
+}
