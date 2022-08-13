@@ -1,0 +1,54 @@
+HTML:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body id="parent">
+    
+    <section>
+        <div id="logo"></div>
+        <span id="sp"></span>
+    </section>
+    
+</body>
+</html>
+
+CSS:
+*
+{
+    margin:0px;
+}
+#parent
+{
+    min-height: 200vh;
+    
+}
+
+
+section
+{
+   position: relative;
+}
+#logo
+{
+    background: red;
+    height:200px;
+    width: 80vw;
+    
+    
+}
+#sp
+{
+      background: blue;
+      height:100px;
+      width:100px;
+      position: absolute;
+      top:10px;
+      left:10px;
+
+}
