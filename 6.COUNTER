@@ -1,0 +1,83 @@
+CSS:body {
+	padding: 10px;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+		Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	line-height: 1.6;
+	font-size: 18px;
+}
+.yellow{
+    background:yellow;
+}
+.red {
+ background:red;
+}
+
+HTML:
+<!doctype HTML>
+<html>
+	<head>
+		<title>codedamn HTML Playground</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="/style.css" />
+	</head>
+	<body>
+		
+        <h1>Counter :  <span id="counter">0</span></h1> 
+       <button id="incrementButton">Increment Button</button>
+       <button id="decrementButton">Decrement Button</button>
+       <ul id="list-items">
+           
+       </ul>
+       
+       
+
+		<script src="https://bit.ly/codedamn-web-console"></script>
+		<script src="/script.js"></script>
+	</body>
+</html>
+JS:
+
+
+const counterElement=document.querySelector('span')
+const incrementButtonElement=document.querySelector('#incrementButton')
+const decrementButtonElement=document.querySelector('#decrementButton')
+const ulElement=document.getElementById('list-items')
+let counter=0
+
+function incrementCounter()
+{
+  counter++
+  counterElement.innerText=counter
+  const li=document.createElement('li')
+  li.setAttribute('data-counter',counter)
+  const textNode=document.createTextNode('Sentence : ')
+  const b=document.createElement('b')
+  const textNode2=document.createTextNode(counter)
+  b.appendChild(textNode)
+  li.appendChild(b)
+  li.appendChild(textNode2)
+  ulElement.appendChild(li)
+  if(counter%2==0){
+    li.setAttribute('class','yellow')
+  }
+  else{
+      li.setAttribute('class','red')
+  }
+  
+}
+function decrementCounter()
+{
+    const li=ulElement.querySelector('[data-counter="'+counter+'"]')
+    
+    const number=parseInt(li.getAttribute('data-counter'),10)
+    if(number%2==0){
+        li.remove()
+    }
+    counter--
+    counterElement.innerText=counter
+    
+}
+incrementButtonElement.addEventListener('click',incrementCounter)
+decrementButtonElement.addEventListener('click',decrementCounter)
